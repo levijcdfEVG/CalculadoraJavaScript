@@ -14,7 +14,7 @@ function clearDisplay() {
 function calculateResult() {
     let operador = cadenaExtractor(document.calc.display.value); // Extrae el operador
     let numeroDeOperaciones = contarOperaciones(document.calc.display.value); //Contar el numero de operaciones
-    if (numeroDeOperaciones > 1) {
+    if (numeroDeOperaciones == 1) {
         switch (operador) {
             case 'suma':
                 sumar(document.calc.display.value); // Llama a la función de suma
