@@ -6,6 +6,8 @@ Esta es una calculadora básica desarrollada con HTML, CSS y JavaScript. Utiliza
 
 La calculadora permite realizar operaciones matemáticas simples, como suma, resta, multiplicación y división. Es una herramienta útil para practicar conceptos básicos de programación y lógica de desarrollo web.
 
+**AVISO:** Esta calculadora funciona de manera similar a las calculadoras clásicas, por lo que solo admite **una operación por vez**. Si intentas introducir múltiples operaciones en una sola entrada (por ejemplo, "5 + 2 * 3"), se mostrará un error. La calculadora debe utilizarse para realizar una operación a la vez, como "5 + 2" o "10 / 2".
+
 ## Características
 
 - Interfaz de usuario simple y limpia.
