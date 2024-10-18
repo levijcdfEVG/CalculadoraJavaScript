@@ -17,8 +17,6 @@ body{
 
 /*Estilos botones*/
 input[type="button"] {
-    /* Aquí puedes definir los estilos */
-   
     padding: 14px;
     font-size: 1.2em;
     margin: 5px;
@@ -33,5 +31,3 @@ input[type="button"]:hover {
     /* Estilo cuando se pasa el mouse por encima */
     background-color: #0056b3;
 }
-
-
