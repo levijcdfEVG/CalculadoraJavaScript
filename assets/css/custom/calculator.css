@@ -1,0 +1,37 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*
+    Posicion Calculadora
+*/
+
+#calculadora{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); /*Centramos la calculadora en medio de la pagina del navegador*/
+    border: 1px solid black;
+    box-shadow: 5px 5px black;
+}
+
+/*Estilos botones*/
+input[type="button"] {
+    /* Aquí puedes definir los estilos */
+   
+    padding: 14px;
+    font-size: 1.2em;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+}
+
+input[type="button"]:hover {
+    /* Estilo cuando se pasa el mouse por encima */
+    background-color: #0056b3;
+}
+
+
