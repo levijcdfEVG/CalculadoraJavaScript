@@ -30,7 +30,5 @@ La calculadora permite realizar operaciones matemáticas simples, como suma, res
    git clone https://github.com/tu-usuario/calculadora-basica.git
 
 
-## Página Web
-
-[Página Web](https://levijcdfevg.github.io/CalculadoraJavaScript/)
+# [Página Web](https://levijcdfevg.github.io/CalculadoraJavaScript/)
 
