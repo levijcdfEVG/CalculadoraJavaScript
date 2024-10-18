@@ -48,10 +48,22 @@ h1{
 }
 
 /*Estilo Boton modal*/
-#botonModal{
+#cajaModal{
     text-align: center;
     position: fixed;
     top: 85%;
     left: 50%;
     transform: translate(-50%,-50%);
+    
 }
+
+#botonModal{
+    transition: 0.3s ease-in-out;
+}
+
+#botonModal:hover{
+    background-color: black;
+    color: white;
+    transform: scale(2.0);
+}
+
