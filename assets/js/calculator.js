@@ -13,23 +13,27 @@ function clearDisplay() {
 //Implementa la logica de la calculadora
 function calculateResult() {
     let operador = cadenaExtractor(document.calc.display.value); // Extrae el operador
-
-    switch (operador) {
-        case 'suma':
-            sumar(document.calc.display.value); // Llama a la función de suma
-            break;
-        case 'resta':
-            restar(document.calc.display.value); // Llama a la función de resta
-            break;
-        case 'multiplicacion':
-            multiplicar(document.calc.display.value); // Llama a la función de multiplicación
-            break;
-        case 'division':
-            dividir(document.calc.display.value); // Llama a la función de división
-            break;
-        default:
-            document.calc.display.value = 'Cálculo no válido'; // Mensaje para cálculo no válido
-            break;
+    let numeroDeOperaciones = contarOperaciones(document.calc.display.value); //Contar el numero de operaciones
+    if (numeroDeOperaciones > 1) {
+        switch (operador) {
+            case 'suma':
+                sumar(document.calc.display.value); // Llama a la función de suma
+                break;
+            case 'resta':
+                restar(document.calc.display.value); // Llama a la función de resta
+                break;
+            case 'multiplicacion':
+                multiplicar(document.calc.display.value); // Llama a la función de multiplicación
+                break;
+            case 'division':
+                dividir(document.calc.display.value); // Llama a la función de división
+                break;
+            default:
+                document.calc.display.value = 'Cálculo no válido'; // Mensaje para cálculo no válido
+                break;
+        }
+    }else{
+        document.calc.display.value = 'ERROR: Introduce solo operaciones unicas'
     }
 }
 
@@ -54,6 +58,22 @@ function cadenaExtractor(cadenaDisplay){
     }
 
     return operador;
+}
+
+//Busca todas las operaciones que contiene la cadena
+function contarOperaciones(cadenaDisplay){
+    let nOperaciones = 0;
+    for (let index = 0; index < cadenaDisplay.length; index++) {
+        if (cadenaDisplay.charAt(index) == '+' || 
+            cadenaDisplay.charAt(index) == '-' || 
+            cadenaDisplay.charAt(index) == '*' || 
+            cadenaDisplay.charAt(index) == '/') {
+            nOperaciones++; //Incrementa el contador
+        }
+
+    }
+
+    return nOperaciones;
 }
 
 //Funciones de Operaciones
