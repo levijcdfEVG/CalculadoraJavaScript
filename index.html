@@ -81,6 +81,42 @@
             </form>
         </div>
         
+
+        <!-- Boton Modal -->
+        <div id="botonModal" class="row g-2 mt-2">
+            <div class="col-12 d-flex justify-content-center">
+                <button type="button" class="btn btn-info w-100 p-3" data-bs-toggle="modal" data-bs-target="#infoModal">
+                    ¿Cómo funciona?
+                </button>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="infoModalLabel">Instrucciones de la Calculadora</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Esta es una calculadora simple que permite realizar operaciones básicas:</p>
+                        <ul>
+                            <li><strong>Sumar:</strong> Usa el botón "+" para sumar dos números.</li>
+                            <li><strong>Restar:</strong> Usa el botón "-" para restar dos números.</li>
+                            <li><strong>Multiplicar:</strong> Usa el botón "*" para multiplicar dos números.</li>
+                            <li><strong>Dividir:</strong> Usa el botón "/" para dividir dos números.</li>
+                            <li><strong>Borrar:</strong> Presiona "C" para limpiar la pantalla.</li>
+                            <li><strong>Resultado:</strong> Presiona "=" para calcular el resultado.</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Scripts de estilo y de la calculadora -->
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/calculator.js"></script>

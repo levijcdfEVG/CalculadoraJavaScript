@@ -46,3 +46,12 @@ h1{
     text-align: center;
     margin: 5%;
 }
+
+/*Estilo Boton modal*/
+#botonModal{
+    text-align: center;
+    position: fixed;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
