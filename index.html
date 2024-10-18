@@ -10,31 +10,76 @@
     <body>
 
         
-        <div id="calculadora" class=".container">
+        <div id="calculadora" class="container">
             <form name="calc">
-                <input type="text" name="display" disabled>
-                <br>
-                <input type="button" value="1">
-                <input type="button" value="2">
-                <input type="button" value="3">
-                <input type="button" value="+">
-                <br>
-                <input type="button" value="4">
-                <input type="button" value="5">
-                <input type="button" value="6">
-                <input type="button" value="-">
-                <br>
-                <input type="button" value="7">
-                <input type="button" value="8">
-                <input type="button" value="9">
-                <input type="button" value="*">
-                <br>
-                <input type="button" value="C">
-                <input type="button" value="0">
-                <input type="button" value="=">
-                <input type="button" value="/">
+                <div class="row mb-2">
+                    <div class="col-12">
+                        <input type="text" class="form-control" name="display" disabled>
+                    </div>
+                </div>
+        
+                <div class="row mb-2">
+                    <div class="col-3">
+                        <input type="button" class="btn btn-primary w-100" value="1">
+                    </div>
+                    <div class="col-3">
+                        <input type="button" class="btn btn-primary w-100" value="2">
+                    </div>
+                    <div class="col-3">
+                        <input type="button" class="btn btn-primary w-100" value="3">
+                    </div>
+                    <div class="col-3">
+                        <input type="button" class="btn btn-secondary w-100" value="+">
+                    </div>
+                </div>
+        
+                <div class="row mb-2">
+                    <div class="col-3">
+                        <input type="button" class="btn btn-primary w-100" value="4">
+                    </div>
+                    <div class="col-3">
+                        <input type="button" class="btn btn-primary w-100" value="5">
+                    </div>
+                    <div class="col-3">
+                        <input type="button" class="btn btn-primary w-100" value="6">
+                    </div>
+                    <div class="col-3">
+                        <input type="button" class="btn btn-secondary w-100" value="-">
+                    </div>
+                </div>
+        
+                <div class="row mb-2">
+                    <div class="col-3">
+                        <input type="button" class="btn btn-primary w-100" value="7">
+                    </div>
+                    <div class="col-3">
+                        <input type="button" class="btn btn-primary w-100" value="8">
+                    </div>
+                    <div class="col-3">
+                        <input type="button" class="btn btn-primary w-100" value="9">
+                    </div>
+                    <div class="col-3">
+                        <input type="button" class="btn btn-secondary w-100" value="*">
+                    </div>
+                </div>
+        
+                <div class="row mb-2">
+                    <div class="col-3">
+                        <input type="button" class="btn btn-danger w-100" value="C">
+                    </div>
+                    <div class="col-3">
+                        <input type="button" class="btn btn-primary w-100" value="0">
+                    </div>
+                    <div class="col-3">
+                        <input type="button" class="btn btn-success w-100" value="=">
+                    </div>
+                    <div class="col-3">
+                        <input type="button" class="btn btn-secondary w-100" value="/">
+                    </div>
+                </div>
             </form>
         </div>
+        
         
         <!-- Scripts de estilo y de la calculadora -->
         <script src="assets/js/bootstrap.min.js"></script>
