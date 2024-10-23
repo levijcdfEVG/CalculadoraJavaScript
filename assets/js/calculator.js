@@ -113,3 +113,10 @@ function dividir(cadenaDisplay) {
     let resultado = numero1 / numero2;
     document.calc.display.value = resultado;
 }
+
+
+function guardarResultado(resultado){
+
+}
+
+//Flujo
