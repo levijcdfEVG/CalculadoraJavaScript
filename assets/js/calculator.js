@@ -1,7 +1,15 @@
 'use strict'
 
+// Variable para almacenar el último resultado y si la pantalla debe limpiarse
+let ultimoResultado = null;
+let limpiarPantalla = false;
+
 // Coge la cadena del caracter que se ha clicado y lo imprime en el display
 function addToDisplay(value) {
+    if (limpiarPantalla) {
+        clearDisplay();
+        limpiarPantalla = false;
+    }
     document.calc.display.value += value;
 }
 
@@ -19,21 +27,23 @@ function calculateResult() {
     if (numeroDeOperaciones === 1) { // Solo una operación permitida
         switch (operador) {
             case 'suma':
-                sumar(cadena); // Llama a la función de suma
+                ultimoResultado = sumar(cadena); // Llama a la función de suma
                 break;
             case 'resta':
-                restar(cadena); // Llama a la función de resta
+                ultimoResultado = restar(cadena); // Llama a la función de resta
                 break;
             case 'multiplicacion':
-                multiplicar(cadena); // Llama a la función de multiplicación
+                ultimoResultado = multiplicar(cadena); // Llama a la función de multiplicación
                 break;
             case 'division':
-                dividir(cadena); // Llama a la función de división
+                ultimoResultado = dividir(cadena); // Llama a la función de división
                 break;
             default:
                 document.calc.display.value = 'Cálculo no válido'; // Mensaje para cálculo no válido
-                break;
+                return;
         }
+        document.calc.display.value = ultimoResultado;
+        limpiarPantalla = true;
     } else {
         document.calc.display.value = 'ERROR: Introduce solo operaciones únicas';
     }
@@ -79,24 +89,21 @@ function sumar(cadenaDisplay) {
     let numeros = cadenaDisplay.split('+');
     let numero1 = parseFloat(numeros[0]);
     let numero2 = parseFloat(numeros[1]);
-    let resultado = numero1 + numero2;
-    document.calc.display.value = resultado;
+    return numero1 + numero2;
 }
 
 function restar(cadenaDisplay) {
     let numeros = cadenaDisplay.split('-');
     let numero1 = parseFloat(numeros[0]);
     let numero2 = parseFloat(numeros[1]);
-    let resultado = numero1 - numero2;
-    document.calc.display.value = resultado;
+    return numero1 - numero2;
 }
 
 function multiplicar(cadenaDisplay) {
     let numeros = cadenaDisplay.split('*');
     let numero1 = parseFloat(numeros[0]);
     let numero2 = parseFloat(numeros[1]);
-    let resultado = numero1 * numero2;
-    document.calc.display.value = resultado;
+    return numero1 * numero2;
 }
 
 function dividir(cadenaDisplay) {
@@ -104,19 +111,16 @@ function dividir(cadenaDisplay) {
     let numero1 = parseFloat(numeros[0]);
     let numero2 = parseFloat(numeros[1]);
     
-    // Verificar si el segundo número es 0 para evitar la división por cero
     if (numero2 === 0) {
         document.calc.display.value = 'Error: División por 0';
         return;
     }
-
-    let resultado = numero1 / numero2;
-    document.calc.display.value = resultado;
+    return numero1 / numero2;
 }
 
-
-function guardarResultado(resultado){
-
+// Llamada a la tecla ANS
+function addANS() {
+    if (ultimoResultado !== null) {
+        addToDisplay(ultimoResultado);
+    }
 }
-
-//Flujo

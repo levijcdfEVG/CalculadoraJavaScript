@@ -22,7 +22,7 @@
         
                 <div class="row g-2">
                     <div class="col-3 d-flex justify-content-center">
-                        <input type="button" class="btn btn-primary w-100 p-3" value="1" onclick="clearDisplay();addToDisplay('1');">
+                        <input type="button" class="btn btn-primary w-100 p-3" value="1" onclick="addToDisplay('1');">
                     </div>
                     <div class="col-3 d-flex justify-content-center">
                         <input type="button" class="btn btn-primary w-100 p-3" value="2" onclick="addToDisplay('2');">
@@ -73,13 +73,13 @@
                         <input type="button" class="btn btn-primary w-100 p-3" value="0" onclick="addToDisplay('0');">
                     </div>
                     <div class="col-3 d-flex justify-content-center">
-                        <input type="button" class="btn btn-success w-100 p-3" value="=" onclick="calculateResult()">
+                        <input type="button" class="btn btn-success w-100 p-3" value="=" onclick=" let resultado = calculateResult();">
                     </div>
                     <div class="col-3 d-flex justify-content-center">
                         <input type="button" class="btn btn-secondary w-100 p-3" value="/" onclick="addToDisplay('/')">
                     </div>
                     <div class="col-12 d-flex justify-content-center">
-                        <input type="button" class="btn btn-secondary w-100 p-3" value="ANS" onclick="addToDisplay('')">
+                        <input type="button" class="btn btn-secondary w-100 p-3" value="ANS" onclick="addANS()">
                     </div>
                 </div>
             </form>
