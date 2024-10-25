@@ -15,7 +15,10 @@ function addToDisplay(value) {
 
 // Limpia el display
 function clearDisplay() {
-    document.calc.display.value = '';
+    if(document.calc.display.value != '')
+        document.calc.display.value = ultimoResultado;
+    else
+        document.calc.display.value = '';
 }
 
 // Implementa la logica de la calculadora
