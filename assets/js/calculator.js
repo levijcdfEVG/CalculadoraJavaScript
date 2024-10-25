@@ -1,6 +1,6 @@
 'use strict'
 
-// Variable para almacenar el último resultado y si la pantalla debe limpiarse
+// Variable para almacenar el último resultado y si la pantalla debe limpiarse (VARIABLES GLOBALES)
 let ultimoResultado = null;
 let limpiarPantalla = false;
 
